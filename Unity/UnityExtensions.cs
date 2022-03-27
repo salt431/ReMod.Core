@@ -52,8 +52,8 @@ namespace ReMod.Core.Unity
                    float.IsInfinity(v3.x) || float.IsInfinity(v3.y) || float.IsInfinity(v3.z);
         }
 
-        public const float MaxAllowedValueTop = 3.402823E+7f;
-        public const float MaxAllowedValueBottom = -3.402823E+7f;
+        public const float MaxAllowedValueTop = 3.102823E+7f;
+        public const float MaxAllowedValueBottom = -3.102823E+7f;
         public static bool IsAbsurd(this Vector3 v3)
         {
             return !(v3.x > MaxAllowedValueBottom && v3.x < MaxAllowedValueTop) ||
@@ -63,17 +63,17 @@ namespace ReMod.Core.Unity
 
         public static void Clamp(this Vector3 v3)
         {
-            v3.x = Mathf.Clamp(v3.x, -512000f, 512000f);
-            v3.y = Mathf.Clamp(v3.y, -512000f, 512000f);
-            v3.z = Mathf.Clamp(v3.z, -512000f, 512000f);
+            v3.x = Mathf.Clamp(v3.x, -486000f, 486000f);
+            v3.y = Mathf.Clamp(v3.y, -486000f, 486000f);
+            v3.z = Mathf.Clamp(v3.z, -486000f, 486000f);
         }
 
         public static void Clamp(this Quaternion v3)
         {
-            v3.x = Mathf.Clamp(v3.x, -512000f, 512000f);
-            v3.y = Mathf.Clamp(v3.y, -512000f, 512000f);
-            v3.z = Mathf.Clamp(v3.z, -512000f, 512000f);
-            v3.w = Mathf.Clamp(v3.w, -512000f, 512000f);
+            v3.x = Mathf.Clamp(v3.x, -486000f, 486000f);
+            v3.y = Mathf.Clamp(v3.y, -486000f, 486000f);
+            v3.z = Mathf.Clamp(v3.z, -486000f, 486000f);
+            v3.w = Mathf.Clamp(v3.w, -486000f, 486000f);
         }
 
         public static string ToCleanString(this Vector3 v3, string format="F4")
